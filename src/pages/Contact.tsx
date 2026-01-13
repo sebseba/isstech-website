@@ -11,10 +11,6 @@ const inputBase =
   "border border-white/10 outline-none transition " +
   "focus:border-fuchsia-500/40 focus:ring-2 focus:ring-fuchsia-500/20";
 
-// ✅ Standardize: use VITE_API_BASE_URL
-// Optional: fallback to "" (same-origin) if you ever serve frontend+backend together behind one domain
-const apiBase = (import.meta.env.VITE_API_URL ?? "").replace(/\/$/, "");
-
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -36,14 +32,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // ✅ Guard: if API base URL is missing in prod, fail loudly (easier debugging)
-      if (!apiBase) {
-        throw new Error(
-          "API base URL is not set. Please configure VITE_API_BASE_URL."
-        );
-      }
-
-      const res = await fetch(`${apiBase}/api/contact`, {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
