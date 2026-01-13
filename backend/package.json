@@ -1,0 +1,17 @@
+{
+  "name": "iss-contact-api",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.19.2",
+    "resend": "^4.8.0"
+  }
+}
