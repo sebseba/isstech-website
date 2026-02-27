@@ -1,6 +1,7 @@
 import { Target, Eye, Award } from "lucide-react";
 import Layout from "@/components/Layout";
 import WhyWorkWithUsShowcase from "@/components/WhyWorkWithUSShowCase";
+import logo from "@/assets/isstech-logo.png";
 
 const About = () => {
   return (
@@ -46,13 +47,16 @@ const About = () => {
             </div>
 
             {/* Replace the solid blue block with a premium glass card */}
-            <div className="rounded-2xl p-12 text-center bg-white/5 backdrop-blur-md border border-white/10">
-              <div className="text-6xl font-bold mb-4 text-fuchsia-300">ISS</div>
-              <div className="text-lg uppercase tracking-[0.3em] text-white/80">Tech</div>
-              <div className="mt-8 pt-8 border-t border-white/10 text-sm text-white/60">
-                Innovative Software Solutions
-              </div>
-            </div>
+           
+              <div className="flex justify-center items-center py-20">
+              <img
+                src={logo}
+               alt="ISS Tech Logo"
+               className="h-32 md:h-48 w-auto object-contain drop-shadow-[0_0_30px_rgba(217,70,239,0.7)]"
+                />
+               </div>
+             
+            
           </div>
         </div>
       </section>
