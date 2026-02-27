@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import Logo from "@/assets/isstech-logo.png";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -92,6 +93,7 @@ const Navbar = () => {
 
       <div className="container-width px-6 md:px-12 flex items-center justify-between">
         <Link className="group inline-flex items-center gap-2 text-xl md:text-2xl font-bold tracking-[0.2em] uppercase text-white" to="/">
+        <img src={Logo} alt="ISS Tech Logo" className="h-12 w-auto object-contain"/>
           <span className="relative">
             ISS Tech
             <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-fuchsia-400/70 shadow-[0_0_14px_rgba(217,70,239,0.45)] transition-all duration-300 group-hover:w-full" />
