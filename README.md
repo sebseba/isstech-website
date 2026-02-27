@@ -1,73 +1,118 @@
-# Welcome to your Lovable project
+ISS Tech – Company Website & Contact System
 
-## Project info
+🔗 https://isstech.ca
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Production-ready company website built with React (Vite) and Tailwind CSS, featuring a custom neon SaaS interface.
+Includes a decoupled Node.js + Express backend used for secure contact form processing and transactional email delivery via Resend API.
 
-## How can I edit this code?
+Originally bootstrapped with Lovable and later extended, customized, and production-prepared using VS Code development workflows.
 
-There are several ways of editing your application.
+Tech Stack
 
-**Use Lovable**
+Frontend
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+React (Vite)
 
-Changes made via Lovable will be committed automatically to this repo.
+TypeScript
 
-**Use your preferred IDE**
+Tailwind CSS
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+shadcn/ui
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Backend
 
-Follow these steps:
+Node.js
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Express.js
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Resend Email API
 
-# Step 3: Install the necessary dependencies.
-npm i
+REST API
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Deployment
+
+Production domain deployment
+
+Environment-based configuration
+
+CORS configuration for frontend/backend communication
+
+Project Structure
+frontend/
+  src/
+backend/
+  server.js
+  package.json
+
+Local Development Setup
+Frontend
+npm install
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+Backend
+cd backend
+npm install
+node server.js
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Environment Variables
 
-**Use GitHub Codespaces**
+Create a .env file in the backend directory:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+PORT=
+CORS_ORIGIN=
+RESEND_API_KEY=
+SENDER_EMAIL=
+RECEIVER_EMAIL=
 
-## What technologies are used for this project?
+Features
 
-This project is built with:
+Fully responsive SaaS-style UI
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Company services and product showcase
 
-## How can I deploy this project?
+Contact form integrated with backend email delivery
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Production-ready full-stack architecture
 
-## Can I connect a custom domain to my Lovable project?
+Environment-based configuration for deployment
 
-Yes, you can!
+Notes
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Initial UI scaffolding was generated using Lovable and later significantly customized, extended, and production-integrated with backend services and deployment configuration using standard development workflows.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+License
+
+MIT
+
+Git Workflow
+
+Clone the repository:
+
+git clone https://github.com/<your-username>/iss-tech-website.git
+cd iss-tech-website
+
+Create a feature branch:
+
+git checkout -b feature/your-feature-name
+
+Commit changes:
+
+git add .
+git commit -m "Add: description of change"
+
+Push to repository:
+
+git push origin feature/your-feature-name
+
+Deployment Notes
+
+Before deployment, ensure environment variables are configured:
+
+PORT=
+CORS_ORIGIN=
+RESEND_API_KEY=
+SENDER_EMAIL=
+RECEIVER_EMAIL=
+
+Update VITE_API_URL in the frontend environment file to point to the production backend domain.
+
